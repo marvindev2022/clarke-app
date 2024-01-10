@@ -84,7 +84,7 @@ export default function RenderTable() {
   }, [submited, controls]);
 
   return (
-    <section className="w-full h-full flex flex-col items-center bg-[url(https://tratamentodeagua.com.br/wp-content/uploads/2021/09/energia-eolica.jpg)] bg-no-repeat bg-cover gap-5">
+    <section className="w-full h-full flex flex-col items-center bg-[url(https://tratamentodeagua.com.br/wp-content/uploads/2021/09/energia-eolica.jpg)] bg-no-repeat bg-cover gap-5 pb-10">
       <div className="w-full h-full bg-[#00000080] flex flex-col items-center ">
         <div
           className={`${
@@ -125,7 +125,7 @@ export default function RenderTable() {
         {filteredSuppliers.length > 0 &&
         submited &&
         Number(userConsumption) > 0 ? (
-          <table className="flex flex-col w-8/12 h-[40rem] bg-white rounded-2xl px-5 mt-10">
+          <table className="flex flex-col w-8/12 max-h-[50rem] min-h-[10rem] h-[60%] bg-white rounded-2xl px-5 mt-10">
             <thead className="w-full border-b border-white h-20 mb-5">
               <tr className="w-full flex gap-5 justify-around text-center items-center">
                 <th className="w-40 h-20 justify-center items-center flex">
