@@ -9,6 +9,7 @@ const {submited} = useSupplier();
 
     return(
         <motion.div
+        className="mt-16"
         animate={controls}
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 1 }}
