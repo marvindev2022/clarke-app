@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import RenderHeader from "../../components/Header";
 import RenderTable from "../../components/Table";
 import instance from "../../service/instance";
-import { promiseToast } from "../../utils/notifications";
+import { notifyError, promiseToast } from "../../utils/notifications";
 
 export default function RenderHome() {
   const [online, setOnline] = useState(false);
@@ -21,7 +21,7 @@ export default function RenderHome() {
           setOnline(true);
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        notifyError("Servidor offline");
       }
     }
 
