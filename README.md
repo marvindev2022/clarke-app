@@ -1,31 +1,48 @@
-Desafio Clarke Energia
-SPA de escolha de fornecedor. Os usuários poderão informar o seu consumo de energia e escolher o melhor fornecedor de acordo com as suas necessidades.
+# Desafio Clarke Energia - Frontend
 
-Dos Requisitos de Produto:
-O usuário deverá informar a sua consumo mensal de energia, exemplo: 30000 kWh (um número fictício > 0)
+## Sobre o Projeto
 
-Ao informar o consumo, o sistema deverá mostrar quais fornecedores poderiam atender a necessidade do cliente
+O frontend é parte integrante do projeto Desafio Clarke Energia, um serviço de mercado livre de energia sustentável. Nesta aplicação, você pode encontrar fornecedores que atendem à sua demanda mensal de consumo de energia.
 
-Cada fornecedor deve ter as seguintes informações: nome, logo, estado de origem, custo por kWh, limite mínimo de kWh, número total de clientes e avaliação média dos clientes
+## Tecnologias Utilizadas
 
-Um fornecedor só pode atender um cliente caso o consumo mensal de energia deste seja maior do que o lmite mínimo de kWh do fornecedor
+- React
+- TypeScript
+- Vite
+- Framer Motion
 
-Entrega Final
-Você deverá enviar um email para victor@clarke.com.br com o seguinte título: Desafio Clarke Energia | <Seu Nome>. No email, você deve fornecer 2 links, são eles:
+## Como Rodar o Projeto Localmente
 
-Link para o repositório principal do projeto (você pode compartilhar a visibilidade do projeto com o usuário victor@clarke.com.br no Github)
-Link para o projeto disponível online. Aqui recomendamos usar serivços como Netlify/Vercel para hospedar o seu frontend e backend. Sinta-se livre para usar outras plataformas que tenham o mesmo serviço.
-Diferenciais
-Os itens a seguir não são obrigatórios. Lembre-se que o principal diferencial é o desafio ser entregue. Os candidatos terão uma avaliação melhor se:
+1. Certifique-se de ter [Node.js](https://nodejs.org/) instalado.
 
-O frontend for feito em React
+2. Clone este repositório:
 
-O backend for feito em Python
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
 
-A aplicação for integrada com Graphql
+3. Navegue até o diretório do projeto:
 
-O frontend tiver testes automatizados com Jest ou Cypress
+   ```bash
+   cd seu-repositorio
+   ```
 
-O backend tiver testes automatizados
+4. Instale as dependências:
 
-Os arquivos para que a aplicação funcione no Docker estiverem configurados
+   ```bash
+   npm install
+   ```
+
+5. Execute o projeto localmente:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Acesse o aplicativo localmente em seu navegador:
+
+   [http://localhost:5173](http://localhost:5173)
+
+## Considerações Finais
+
+Este projeto foi desenvolvido como parte do processo seletivo proposto pela Clarke Energia. Se tiver dúvidas ou sugestões, não hesite em entrar em contato pelo e-mail mavirolero@gmail.com.

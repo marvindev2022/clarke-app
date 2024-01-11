@@ -38,13 +38,15 @@ export default function RenderTable() {
 
   const handleSearch = () => {
     setSubmited(true);
+    
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === "NumpadEnter") {
       handleSearch();
-    }
+    
   };
+}
 
   useEffect(() => {
     const fetchSupplier = async () => {
@@ -74,7 +76,8 @@ export default function RenderTable() {
       (item: any) => item.totalCustomers >= Number(userConsumption)
     );
     setFilteredSuppliers(filterSuppliers as any);
-  }, [submited]);
+
+  }, [submited,userConsumption]);
 
   useEffect(() => {
     controls.start({
@@ -109,6 +112,7 @@ export default function RenderTable() {
                   setUserConsumption(
                     isNaN(inputValue) ? "" : Math.max(0, inputValue).toString()
                   );
+                  
                 }}
                 className="border h-14 w-full rounded-full text-black px-5 border-black"
               />
@@ -123,8 +127,8 @@ export default function RenderTable() {
           </div>
         </div>
         {filteredSuppliers.length > 0 &&
-        submited &&
-        Number(userConsumption) > 0 ? (
+        submited 
+        ? (
           <table className="flex flex-col w-8/12 max-h-[50rem] min-h-[10rem] h-[60%] bg-white rounded-2xl px-5 mt-10">
             <thead className="w-full border-b border-white h-20 mb-5">
               <tr className="w-full flex gap-5 justify-around text-center items-center">
@@ -179,22 +183,18 @@ export default function RenderTable() {
               ))}
             </tbody>
           </table>
-        ) : submited &&
-          (userConsumption !== "" || parseFloat(userConsumption) > 0) ? (
+        ) : filteredSuppliers.length <1 && submited &&
+          (userConsumption !== "" || parseFloat(userConsumption) > 0) && (
           <div className="flex flex-col items-center justify-center mt-8 gap-2">
-            <label className="mr-4 text-2xl text-white pb-2">
-              Não há fornecedores disponíveis para o seu consumo mensal
+            <label className="flex gap-5 mr-4 text-2xl text-white pb-2">
+              Não há fornecedores disponíveis para o seu consumo mensal. <p className="underline text-primary" onClick={()=>{
+                  setSubmited(false)
+                  setUserConsumption("")
+                  setFilteredSuppliers([])
+                }}>Voltar</p>
             </label>
           </div>
-        ) : (
-          submited && (
-            <div className="flex flex-col items-center justify-center gap-2">
-              <label className="mr-4 text-2xl text-white pb-2">
-                Informe seu consumo mensal para ver os fornecedores disponíveis
-              </label>
-            </div>
-          )
-        )}
+        ) }
       </div>
     </section>
   );
