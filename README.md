@@ -18,13 +18,13 @@ O frontend é parte integrante do projeto Desafio Clarke Energia, um serviço de
 2. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone git@github.com:marvindev2022/clarke-app.git
    ```
 
 3. Navegue até o diretório do projeto:
 
    ```bash
-   cd seu-repositorio
+   cd clarke-app
    ```
 
 4. Instale as dependências:
@@ -43,6 +43,12 @@ O frontend é parte integrante do projeto Desafio Clarke Energia, um serviço de
 
    [http://localhost:5173](http://localhost:5173)
 
+7. Acesso pelo link do deploy:
+
+   [https://clarke-energia-app.netlify.app/](https://clarke-energia-app.netlify.app/)
+
+***obs: Devido ao servidor da render ficar inativo depois de um tempo sem uso, ao iniciar o servidor, você poderá acompanhar pelo toast o andamento do processo e será informado quando estiver online.***
+
 ## Considerações Finais
 
-Este projeto foi desenvolvido como parte do processo seletivo proposto pela Clarke Energia. Se tiver dúvidas ou sugestões, não hesite em entrar em contato pelo e-mail mavirolero@gmail.com.
+Este projeto foi desenvolvido como parte do processo seletivo proposto pela Clarke Energia. Se tiver dúvidas ou sugestões, não hesite em entrar em contato pelo e-mail <mavirolero@gmail.com>.
